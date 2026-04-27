@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(EndCrystalEntity.class)
 public class EndCrystalInteractMixin {
 
-    @Inject(method = "interact", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "interactMob", at = @At("HEAD"), cancellable = true)
     private void onInteract(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> cir) {
         if (!CrystalProtectConfig.get().blockInteract) return;
         if (player instanceof ServerPlayerEntity sp && CrystalProtectMod.isProtected(sp)) {
