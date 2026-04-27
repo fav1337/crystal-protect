@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "crystalprotect",
+  "version": "1.1.0",
+  "name": "Crystal Kill Protect",
+  "description": "Ngăn tự nổ bằng End Crystal sau khi kill player trong Crystal PvP. Có menu cài đặt.",
+  "authors": ["You"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/crystalprotect/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.crystalprotect.CrystalProtectMod"
+    ],
+    "modmenu": [
+      "com.crystalprotect.CrystalProtectModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "crystalprotect.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
